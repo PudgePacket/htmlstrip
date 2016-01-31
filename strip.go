@@ -10,9 +10,6 @@ import (
 func Strip(node *html.Node) {
 	var f func(*html.Node, int) bool
 	f = func(n *html.Node, d int) bool {
-		if n == nil {
-			return
-		}
 		nodeIsScript := false
 		if n.Type == html.ElementNode {
 			if n.Data == "script" {
